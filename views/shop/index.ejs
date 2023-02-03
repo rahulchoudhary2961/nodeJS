@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <link rel="stylesheet" href="/css/shop.css"> -->
+    <link rel="stylesheet" href="/css/product.css">
+    <title>Index Page</title> 
+</head>
+<body>
+    <header id="main-header">
+        <nav id="main-header__nav">
+            <ul id="main--header__item-list">
+                <li id="main-header__item"><a id="active" href="/">Shop</a></li>
+                <li id="main-header__item"><a id="active" href="/products">Products</a></li>
+                <li id="main-header__item"><a id="active" href="/cart">Cart</a></li>
+                <li id="main-header__item"><a id="active" href="/product-page">Add Products</a></li>
+                <li id="main-header__item"><a id="active" href="/admin-products">Admin Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <% if (prods.length > 0) { %>
+
+            <div id="grid">
+                <% for (let product of prods) { %>
+                    <h1> BOOK NAME: <%= product.title %></h1>
+                    <% } %>
+
+            </div>
+            <% } else { %>
+                <h1>No products found</h1>
+                <% } %>
+    </main>
+    <h1>index page</h1>
+</body>
+</html>
